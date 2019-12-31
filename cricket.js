@@ -149,14 +149,40 @@ function t2bat() {
 }
 
 
-let timeout;
-(function delayedAlert() {
-    timeoutID = setTimeout(showAlert, 60000);
-  })()
+// let timeout;
+// (function delayedAlert() {
+//     timeoutID = setTimeout(showAlert, 60000);
+//   })()
    
-  function showAlert() {
-    alert(" GAME OVER , Time's UP");
-    document.getElementById("b1").disabled = true;
-    document.getElementById("b2").disabled = true;
-  }
+//   function showAlert() {
+//     alert(" GAME OVER , Time's UP");
+//     document.getElementById("b1").disabled = true;
+//     document.getElementById("b2").disabled = true;
+//   }
 
+let timeInterval;
+// let timerSeconds=59;
+let timer = () => {
+    timeInterval = setInterval(() => {
+      document.getElementById("timer").value = timerSeconds;
+      timerSeconds--;
+    }, 1000);
+  };
+  
+  let clearTime = () => {
+    setTimeout(() => {
+      alert(" GAME OVER , Time's UP ");
+      document.getElementById("b1").disabled = true;
+      document.getElementById("b2").disabled = true;
+      clearInterval(timeInterval);
+    //   timerSeconds = 59;
+      document.getElementById("timer").disabled = false;
+  
+    }, 60000);
+  };
+  
+  let play = () => {
+    timer();
+    clearTime();
+    document.getElementById("timer").disabled = true;
+  };
