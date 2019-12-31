@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+</head>
+
+<body>
+    <div class="container-fluid bg-secondary vh-100">
+        <div class="row">
+            <div class="col-xl-6 my-3">
+                
+                <table class="table table-dark ">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="h-4">Team 1 Players</th>
+                            <th scope="col" class="h-4">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-light text-dark" id="t1t">
+
+                    </tbody>
+                    <tfoot class="bg-success  h4 ">
+                        <tr id="t1r"></tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col-xl-6 my-3">
+                
+                <table class="table table-dark ">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="h-5">Team 2 Players</th>
+                            <th scope="col" class="h-5">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="t2t" class="table-light text-dark">
+                    
+                    </tbody>
+                    <tfoot class="bg-success  h4">    
+                        <tr id="t2r"></tr>
+                    </tfoot>
+                </table>
+                
+            </div>
+            <div class="col-xl-6 offset-3">
+            <div class="card bg-warning text-bold">
+                <div id="tc" class="h4 text-center"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scorer.js"></script>
+</body>
